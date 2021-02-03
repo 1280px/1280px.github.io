@@ -1,7 +1,202 @@
-body {
-    background-color: #333;
+html {
+    background: linear-gradient(180deg, #111 80%, #222016);
+    background-attachment: fixed;
+    font-family: "Ubuntu";
+    color: #999; 
+    height: 100%;
+}
+h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: "Montserrat"; 
+    margin: 8px 24px 4px;
+}
+h2 {
+    color: #fff;
+    font-size: 28px;
+    margin: 8px 64px 0px;
+    font-weight: 100;
+    font-family: "Montserrat"; }
+h3 {
+    color: #333;
+    font-size: 28px;
+    margin: 8px 16px 0px;
+    font-weight: 100;
+    font-family: "Montserrat"; 
+    text-align: center;
+}
+p {
+    color: #ccc;
+    font-size: 16px; 
+    margin: 8px 16px 16px; }
+
+.debug {
+    color: #e60c0c;
+    background-color: #e60c0c4a; }
+
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vmin;
+}
+#top {
+    display: block;
+    color: #fff;
+    font-size: 64px;
+    padding: 12px 200px;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    transition: 500ms;
+    font-family: "Montserrat"; }
+#top:hover {
+    color: #FFDA47;
+    text-shadow: 0px 0px 8px #F7B20F; 
 }
 
-.p {
-    font-size: 36px;
+
+
+.navcontainer {
+    display: flex;
+    justify-content: center; 
 }
+.navbtn {
+    background: #6662;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    margin: 4px;
+    transition: 500ms; }
+.navbtn-link {
+    padding: 12px 8px;
+    width: 128px;
+    display: inline-block;
+    text-decoration: none;
+    color: #eee; }
+.navbtn-icon {
+    margin-bottom: -2px;
+    margin-right: 8px;
+    transition: 500ms; }
+.navbtn:hover .navbtn-icon {
+    filter: brightness(1.3);
+}
+.nav-github:hover {
+    border-color: #3F6484;
+    background: linear-gradient(180deg, #3F617F30 30%, #3F617F90); }
+.nav-github:active {
+    border-color: #eee;
+    background: linear-gradient(180deg, #3F617F60 10%, #3F617FC0); 
+}
+.nav-reddit:hover {
+    border-color: #DD5100;
+    background: linear-gradient(180deg, #E05D0020 30%, #E05D0080); }
+.nav-reddit:active {
+    border-color: #eee;
+    background: linear-gradient(180deg, #E05D0060 10%, #E05D00C0); 
+}
+.nav-youtube:hover {
+    border-color: #DE0000;
+    background: linear-gradient(180deg, #FF000020 30%, #FF000080); }
+.nav-youtube:active {
+    border-color: #eee;
+    background: linear-gradient(180deg, ##FF0000A0 10%, ##FF0000C0); 
+}
+.nav-stylish:hover {
+    border-color: #36B56B;
+    background: linear-gradient(180deg, #36B56B20 30%, #36B56B80); }
+.nav-stylish:active {
+    border-color: #eee;
+    background: linear-gradient(180deg, #36B56B60 10%, #36B56BC0); 
+}
+.nav-etc:hover {
+    border-color: #666;
+    background: linear-gradient(180deg, #6662 30%, #6668); }
+.nav-etc:active {
+    border-color: #ccc;
+    background: linear-gradient(180deg, #6666 10%, #666C); 
+}
+
+
+
+.ghostblock {
+    width: 640px;
+    min-height: 120px;
+    margin: 15vmin auto 25vmin;
+}
+
+
+
+.projcontainer {
+   background-color: #3339;
+   margin: 10px -8px; 
+   padding-top: 6px; }
+.projgroup {
+    display: flex; 
+    justify-content: space-evenly; }
+.projblock {
+    margin: 10px 0px 40px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: #fff; 
+    width: 28%;
+    transition: 500ms;
+}
+.projblock:hover {
+	border-color: #F7B20F;
+	box-shadow: 0px 2px 8px #FFDA47;
+}
+
+
+
+.footer {
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+}
+.footerbtn {
+    background: #6662;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    margin: 4px;
+    transition: 500ms; 
+}
+.footerbtn:hover {
+    border-color: #f7b20f;
+    background: linear-gradient(180deg, #bf870330 30%, #bf870390); }
+.footerbtn:active {
+    border-color: #eee;
+    background: linear-gradient(180deg, #D7AC0421 20%, #f7b20fa0); 
+}
+.footerbtn-link {
+    padding: 12px 8px;
+    width: 256px;
+    display: inline-block;
+    text-decoration: none;
+    color: #eee; }
+.footerbtn:hover .navbtn-icon {
+    filter: brightness(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
