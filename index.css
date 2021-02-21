@@ -1,19 +1,22 @@
-html {
-    background: linear-gradient(180deg, #111 80%, #222016);
-    background-attachment: fixed;
+* {
+	scrollbar-color: #FFF3 #111 !important;
+	scrollbar-width: thin; }
+body {
     font-family: "Ubuntu";
     color: #999; 
-    height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #777
 }
 h1 {
-    color: #fff;
-    font-size: 40px;
+    color: #FFF;
+    font-size: 36px;
     font-weight: 100;
     font-family: "Montserrat"; 
-    margin: 8px 24px 4px;
-}
+    margin: 11px 24px 6px;
+    text-shadow: 0px 0px 8px #0009; }
 h2 {
-    color: #fff;
+    color: #FFF;
     font-size: 28px;
     margin: 8px 64px 0px;
     font-weight: 100;
@@ -24,27 +27,35 @@ h3 {
     margin: 8px 16px 0px;
     font-weight: 100;
     font-family: "Montserrat"; 
-    text-align: center;
-}
+    text-align: center; }
 p {
-    color: #ccc;
+    color: #AAA;
     font-size: 16px; 
-    margin: 8px 16px 16px; }
+    margin: 8px 8px 8px; }
+i {
+	color: #DDD; }
 
-.debug {
-    color: #e60c0c;
-    background-color: #e60c0c4a; }
-
-
-
+.infocontainer {
+	height: 100vh;
+}
+.icbg {
+	z-index: -20;
+	width: 100%;
+	height: 120vh;
+	position: absolute;
+	background: url(https://source.unsplash.com/collection/23496388/1280x1024), #111;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* filter: brightness(0.4); */
+}
 .header {
   display: flex;
   justify-content: center;
-  margin-top: 20vmin;
+  padding-top: 20vmin;
 }
 #top {
     display: block;
-    color: #fff;
+    color: #FFF;
     font-size: 64px;
     padding: 12px 200px;
     font-weight: 100;
@@ -52,11 +63,11 @@ p {
     text-decoration: none;
     transition: 500ms;
     font-family: "Montserrat"; }
-#top:hover {
+#top:hover, #top:focus {
     color: #FFDA47;
     text-shadow: 0px 0px 8px #F7B20F; 
+	box-outline: none !important;
 }
-
 
 
 .navcontainer {
@@ -64,19 +75,118 @@ p {
     justify-content: center; 
 }
 .navbtn {
-    background: #6662;
-    border: 2px solid #333;
-    border-radius: 4px;
-    display: inline-block;
-    text-align: center;
-    margin: 4px;
-    transition: 500ms; }
+	background: #CCC1; background-size: 4px 2px; background-repeat: no-repeat;
+	border: 2px solid #FFF5;
+	border-radius: 4px;
+	display: inline-block;
+	text-align: center;
+	margin: 4px;
+	transition: 500ms;
+	box-shadow: 0px 0px 6px #1113, inset 0px 6px 2px 0px #FFF2;
+	backdrop-filter: blur(5px);
+}
+.navbtn:hover {
+	border: 2px solid #FFF6;
+    background: linear-gradient(180deg, #FFF1 30%, #FFF7);
+    box-shadow: 0px 0px 9px #1114, inset 0px 6px 2px 0px #FFF2;
+}
+.navbtn:active {
+	outline: 2px solid #AAA6;
+    background: linear-gradient(180deg, #FFF4 10%, #FFF8); 
+}
+.navbtn:focus, .navbtn:focus:visited, .navbar:active, .navbar:active:visited, .navbtn:visited {
+  outline: 0rem solid #FFF6;
+  outline-offset: 0px;
+}
+
+.nav-github:hover {
+    border: 2px solid #719FC8;
+    background: linear-gradient(180deg, #5C88AE36 30%, #3F617F90);
+    box-shadow: 0px 0px 5px 1px #5689B5BF, inset 0px 6px 2px 0px #FFF2; }
+.nav-github:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #3F617F60 10%, #3F617FC0); 
+}
+.nav-reddit:hover {
+    border: 2px solid #FFA950;
+    background: linear-gradient(180deg, #D5926436 30%, #FF6B0163);
+    box-shadow: 0px 0px 5px 1px #F98000C0, inset 0px 6px 2px 0px #FFF2; }
+.nav-reddit:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #F9670061 10%, #F47200BF); 
+}
+.nav-youtube:hover {
+    border: 2px solid #FF6A6A;
+    background: linear-gradient(180deg, #FF858536 30%, #FF000060);
+    box-shadow: 0px 0px 5px 1px #F04040BF, inset 0px 6px 2px 0px #FFF2; }
+.nav-youtube:active {
+    border: 2px solid #FFF9;
+	background: linear-gradient(180deg, #FF00006E 10%, #FF1616C7);
+}
+.nav-stylish:hover {
+    border: 2px solid #66EA9C;
+    background: linear-gradient(180deg, #8EB9A036 30%, #36B56B80);
+    box-shadow: 0px 0px 5px 1px #45C47ABF, inset 0px 6px 2px 0px #FFF2; }
+.nav-stylish:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #36B56B60 10%, #36B56BC0); 
+}
+.nav-etc:hover {
+	border: 2px solid #F7B20F;
+	box-shadow: 0px 0px 5px 1px #FFDA47C0, inset 0px 6px 2px 0px #FFF2;
+}
+.nav-etc:active {
+    border: 2px solid #FFDA47;
+}
+/* .nav-github:hover {
+    border: 2px solid #416B8E;
+    background: linear-gradient(180deg, #5C88AE36 30%, #3F617F90);
+    box-shadow: 0px 0px 5px 1px #416B8EC0, inset 0px 6px 2px 0px #FFF2; }
+.nav-github:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #3F617F60 10%, #3F617FC0); 
+}
+.nav-reddit:hover {
+    border: 2px solid #F98000;
+    background: linear-gradient(180deg, #D5926436 30%, #FF6B0163);
+    box-shadow: 0px 0px 5px 1px #F98000C0, inset 0px 6px 2px 0px #FFF2; }
+.nav-reddit:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #F9670061 10%, #F47200BF); 
+}
+.nav-youtube:hover {
+    border: 2px solid #EA0000;
+    background: linear-gradient(180deg, #FF858536 30%, #FF000060);
+    box-shadow: 0px 0px 5px 1px #FF1616BF, inset 0px 6px 2px 0px #FFF2; }
+.nav-youtube:active {
+    border: 2px solid #FFF9;
+	background: linear-gradient(180deg, #FF00006E 10%, #FF1616C7);
+}
+.nav-stylish:hover {
+    border: 2px solid #49A871;
+    background: linear-gradient(180deg, #8EB9A036 30%, #36B56B80);
+    box-shadow: 0px 0px 5px 1px #49A871C0, inset 0px 6px 2px 0px #FFF2; }
+.nav-stylish:active {
+    border: 2px solid #FFF9;
+    background: linear-gradient(180deg, #36B56B60 10%, #36B56BC0); 
+}
+.nav-etc:hover {
+	border: 2px solid #F7B20F;
+	box-shadow: 0px 0px 5px 1px #FFDA47C0, inset 0px 6px 2px 0px #FFF2;
+}
+.nav-etc:active {
+    border: 2px solid #FFDA47;
+} */
+
+
 .navbtn-link {
     padding: 12px 8px;
     width: 128px;
     display: inline-block;
     text-decoration: none;
-    color: #eee; }
+    color: #EEE; 
+    text-shadow: 0px 0px 8px #0009;
+}
 .navbtn-icon {
     margin-bottom: -2px;
     margin-right: 8px;
@@ -84,78 +194,92 @@ p {
 .navbtn:hover .navbtn-icon {
     filter: brightness(1.3);
 }
-.nav-github:hover {
-    border-color: #3F6484;
-    background: linear-gradient(180deg, #3F617F30 30%, #3F617F90); }
-.nav-github:active {
-    border-color: #eee;
-    background: linear-gradient(180deg, #3F617F60 10%, #3F617FC0); 
-}
-.nav-reddit:hover {
-    border-color: #DD5100;
-    background: linear-gradient(180deg, #E05D0020 30%, #E05D0080); }
-.nav-reddit:active {
-    border-color: #eee;
-    background: linear-gradient(180deg, #E05D0060 10%, #E05D00C0); 
-}
-.nav-youtube:hover {
-    border-color: #DE0000;
-    background: linear-gradient(180deg, #FF000020 30%, #FF000080); }
-.nav-youtube:active {
-    border-color: #eee;
-    background: linear-gradient(180deg, ##FF0000A0 10%, ##FF0000C0); 
-}
-.nav-stylish:hover {
-    border-color: #36B56B;
-    background: linear-gradient(180deg, #36B56B20 30%, #36B56B80); }
-.nav-stylish:active {
-    border-color: #eee;
-    background: linear-gradient(180deg, #36B56B60 10%, #36B56BC0); 
-}
-.nav-etc:hover {
-    border-color: #666;
-    background: linear-gradient(180deg, #6662 30%, #6668); }
-.nav-etc:active {
-    border-color: #ccc;
-    background: linear-gradient(180deg, #6666 10%, #666C); 
-}
-
 
 
 .ghostblock {
     width: 640px;
     min-height: 120px;
-    margin: 15vmin auto 25vmin;
+    margin: 12vmin auto 31vh;
+    text-shadow: 0px 0px 10px #0009;
 }
-
+.ghostblock p {
+    color: #E7E7E7;
+}
+.wpinfo {
+	margin: -28px 10px 10px 0px;
+	text-shadow: 0px 0px 10px #0009;
+	color: #9999;
+	transition: 500ms;
+	float: right;
+}
+.wpinfo:hover {
+    color: #FFDA47 !important;
+    text-shadow: 0px 0px 8px #F7B20F; 
+}
 
 
 .projcontainer {
-   background-color: #3339;
-   margin: 10px -8px; 
-   padding-top: 6px; }
-.projgroup {
-    display: flex; 
-    justify-content: space-evenly; }
-.projblock {
-    margin: 10px 0px 40px;
-    border: 2px solid #fff;
-    border-radius: 8px;
-    background-color: #fff; 
-    width: 28%;
-    transition: 500ms;
+	background: linear-gradient(0deg, #222 76%, #0000 96%);
 }
-.projblock:hover {
+.projblock {
+	max-width: 1440px;
+	margin: auto;
+	background: linear-gradient(0deg, #2220 84%, #3333 90%, #3331 99.6%);
+	padding-top: 2px;
+	margin-top: -75px;
+	border: 2px solid #FFF6;
+	box-shadow: 2px 0px 8px #1118, inset 0px 10px 4px 1px #FFF2;
+	backdrop-filter: blur(3px);
+	border-radius: 18px 18px 0px 0px;
+	background-position-y: -2px;
+}
+.projgroup-left {
+    display: flex; 
+    justify-content: space-evenly; 
+	width: 100%; 
+    max-width: 1280px;
+    margin: auto;
+    /* padding-right: 5vw; */
+}
+.projgroup-right {
+    display: flex; 
+    justify-content: space-evenly; 
+	width: 95%; 
+	margin-left: 5vw;
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 5vw;
+	}
+.proj {
+	margin: 10px 0px 40px;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	background-color: #fff;
+	width: 28%;
+	transition: 500ms;
+	height: 440px;
+}
+.proj:hover, .proj:active {
 	border-color: #F7B20F;
 	box-shadow: 0px 2px 8px #FFDA47;
 }
-
+.projimg {
+	border-radius: 8px 8px 0px 0px;
+	padding: 2px;
+	width: 98.8%;
+}
+.proj a {
+	text-decoration: none;
+}
 
 
 .footer {
-  display: flex;
-  height: 56px;
-  justify-content: space-between;
+	display: flex;
+	height: 56px;
+	background: linear-gradient(180deg, #111 20%, #222016);
+	margin-top: -15px;
+	justify-content: space-between;
+	padding: 22px 6px 6px;
 }
 .footerbtn {
     background: #6662;
@@ -167,10 +291,10 @@ p {
     transition: 500ms; 
 }
 .footerbtn:hover {
-    border-color: #f7b20f;
+    border-color: #F7B20F;
     background: linear-gradient(180deg, #bf870330 30%, #bf870390); }
 .footerbtn:active {
-    border-color: #eee;
+    border-color: #EEE;
     background: linear-gradient(180deg, #D7AC0421 20%, #f7b20fa0); 
 }
 .footerbtn-link {
@@ -178,25 +302,8 @@ p {
     width: 256px;
     display: inline-block;
     text-decoration: none;
-    color: #eee; }
+    color: #EEE; }
 .footerbtn:hover .navbtn-icon {
     filter: brightness(1.3);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
